@@ -1,3 +1,22 @@
 GET http://localhost:7000/products
 
-###
+### Register
+
+POST http://localhost:7000/auth/register
+Content-Type: application/json
+
+{
+  "email": "jared.hutchinson99@gmail.com",
+  "firstName": "Jared",
+  "lastName": "Hutch",
+  "password": "password123"
+}
+
+### Sign in
+POST http://localhost:7000/auth
+Content-Type: application/json
+
+{
+  "email": "jared.hutchinson99@gmail.com",
+  "password": "password123"
+}

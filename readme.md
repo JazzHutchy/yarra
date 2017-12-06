@@ -5,10 +5,11 @@
 - name: string
 
 ## Steps
-- yarn init
-- yarn add (express, nodemon --dev, body-parser, mongoose
-- In package.json
+1. yarn init
+2. yarn add (express, nodemon --dev, body-parser, mongoose), creates 'package.json'
+3. 
 
+Add in package.json
 ```javascript
  "scripts": {
     "dev": "nodemon server.js",
@@ -48,4 +49,30 @@ server.listen(7000, (error) => {
 
 Add User.js and schema
 ```javascript
+const mongoose = require('./init')
+const passportLocalMongoose = require('passport-local-mongoose')
+
+const userSchema = new mongoose.Schema({
+  firstName: String,
+  lastName: String
+})
+
+userSchema.plugin(passportLocalMongoose, {
+  usernameField: 'email',
+  usernameLowerCase: true, // Ensure that all emails are lowercase (e.g. BOB@gmail.com = bob@gmail.com)
+  session: false // Disable sessions as we'll use JWTs
+})
+
+const User = mongoose.model('User', userSchema)
+
+module.exports = User
 ```
+
+Add auth.js in the routes folder
+```javascript
+```
+
+Add another auth.js in a newly created 'middleware folder
+```javascript
+```
+
