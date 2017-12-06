@@ -72,7 +72,7 @@ Add auth.js in the routes folder
 ```javascript
 ```
 
-Add another auth.js in a newly created 'middleware folder
+Add another auth.js in a newly created 'middleware folder'
 ```javascript
 ```
 
