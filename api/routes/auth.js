@@ -8,7 +8,7 @@ const router = new express.Router()
 router.post('/auth/register',
   // middleware that handles the registration process
   authMiddleware.register,
-
+  authMiddleware.signIn,
   // json handler 
   authMiddleware.signJWTForUser
 )

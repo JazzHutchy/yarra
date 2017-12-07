@@ -1,7 +1,7 @@
 import React from 'react'
 
 function SignUpForm({
-
+  onSignUp
 }) {
   return (
     <form
@@ -10,13 +10,12 @@ function SignUpForm({
         event.preventDefault()
 
         const form = event.target
-        const elements = form.elements // Allows looking up fields using their 'name' attributes
-        // Get entered values from fields
+        const elements = form.elements
         const email = elements.email.value
         const password = elements.password.value
 
         // Pass this information along to the parent component
-        onSignIn({ email, password })
+        onSignUp({ email, password })
       }}
     >
       <label
@@ -40,7 +39,7 @@ function SignUpForm({
       />
       <button className="button-animate">
         Sign-Up
-    </button>
+      </button>
     </form>
   )
 }

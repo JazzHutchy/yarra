@@ -34,7 +34,7 @@ button {
 }
 
 .button-animate {
-  animation: animate 3s linear infinite;
+  animation: animate 5s linear infinite;
 }
 
 .mb-1 { margin-bottom: 0.25rem }
