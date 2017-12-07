@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import SignInForm from './components/SignInForm'
-// import logo from './logo.svg';
 import './App.css';
+import { signIn } from './api/auth'
 
 class App extends Component {
   onSignIn = ({ email, password }) => {
     console.log('App received', { email, password })
+    signIn({ email, password })
+      .then((data) => {
+        console.log('signed in', data)
+      })
   }
 
   render() {

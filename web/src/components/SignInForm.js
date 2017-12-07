@@ -7,7 +7,7 @@ function SignInForm({
     <form
       onSubmit={(event) => {
         // Prevent old-school form submission
-        event.eventDefault()
+        event.preventDefault()
 
         const form = event.target
         const elements = form.elements // Allows looking up fields using their 'name' attributes

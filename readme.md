@@ -80,3 +80,6 @@ Add web folder
 
 yarn create react-app web
 
+yarn add axios in web folder
+
+yarn add cors
