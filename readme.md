@@ -76,3 +76,7 @@ Add another auth.js in a newly created 'middleware folder'
 ```javascript
 ```
 
+Add web folder
+
+yarn create react-app web
+
