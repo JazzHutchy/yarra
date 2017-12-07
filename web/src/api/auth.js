@@ -10,3 +10,7 @@ export function signIn({ email, password }) {
     })
 }
 
+export function signOutNow() {
+  // Forget the token
+  setToken(null)
+}

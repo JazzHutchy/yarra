@@ -1,7 +1,7 @@
 import React from 'react'
 
-function SignInForm({
-  onSignIn
+function SignUpForm({
+
 }) {
   return (
     <form
@@ -39,10 +39,10 @@ function SignInForm({
         className='mb-2'
       />
       <button className="button-animate">
-        Sign-In
+        Sign-Up
     </button>
     </form>
   )
 }
 
-export default SignInForm
+export default SignUpForm

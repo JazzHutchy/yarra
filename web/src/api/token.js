@@ -2,7 +2,7 @@ import decodeJWT from 'jwt-decode'
 
 const key = 'userToken'
 
-function saveToken(token) {
+export function saveToken(token) {
   if (token) {
     // Remember the token
     localStorage.setItem(key, token)
@@ -22,8 +22,8 @@ export function getValidToken() {
     if (now > decodedToken.exp) {
       return null
       // Valid token
-      return token
     }
+    return token
   }
   catch (error) {
     // Invalid token
@@ -34,7 +34,7 @@ export function getValidToken() {
 export function getDecodedToken() {
   const validToken = getValidToken()
   if (validToken) {
-    return decodeJWT(token)
+    return decodeJWT(validToken)
   }
   else {
     return null

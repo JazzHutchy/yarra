@@ -28,18 +28,23 @@ input {
 }
 
 button {
-  background-color: rgb(147, 139, 255)
+  background-color: red;
+  color: white;
+  padding: 10px;
+}
+
+.button-animate {
+  animation: animate 3s linear infinite;
 }
 
 .mb-1 { margin-bottom: 0.25rem }
 .mb-2 { margin-bottom: 0.5rem }
 .mb-3 { margin-bottom: 0.75rem }
 
-@keyframes {
-  0% {
-    background-color: red;
-  }
-  100%{
-    background-color: green;
-  }
+@keyframes animate {
+  0% {background-color: red;}
+  25% {background-color: yellow;}
+  50% {background-color: blue;}
+  75% {background-color: green;}
+  100% {background-color: red;}
 }
