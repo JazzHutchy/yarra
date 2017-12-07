@@ -83,3 +83,5 @@ yarn create react-app web
 yarn add axios in web folder
 
 yarn add cors
+
+yarn add jwt-decode
